@@ -1,0 +1,20 @@
+>Feature BB-002_CYTB
+1	>201	gene
+			gene	CYTB
+1	>201	CDS		
+			product	cytochrome b
+			codon_start	1
+>Feature BB-003_CYTB
+1	>201	gene
+			gene	CYTB
+1	>201	CDS		
+			product	cytochrome b
+			codon_start	1
+>Feature BB-001_rRNA
+<1	>200	rRNA
+			product	16S ribosomal RNA
+
+>Feature BB-003_rRNA
+<1	>200	rRNA
+			product	16S ribosomal RNA
+

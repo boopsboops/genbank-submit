@@ -1,0 +1,654 @@
+Seq-submit ::= {
+  sub {
+    contact {
+      contact {
+        name
+          name {
+            last "Mouse" ,
+            first "Mickey" } ,
+        affil
+          std {
+            affil "Disney" ,
+            div "" ,
+            city "Los Angeles" ,
+            sub "CA" ,
+            country "USA" ,
+            street "Hollywood" ,
+            email "m.mouse@disney.com" ,
+            fax "" ,
+            phone "001-202-000-0000" ,
+            postal-code "" } } } ,
+    cit {
+      authors {
+        names
+          std {
+            {
+              name
+                name {
+                  last "Mouse" ,
+                  first "Mickey" ,
+                  initials "M." ,
+                  suffix "" } } } ,
+        affil
+          std {
+            affil "Disney" ,
+            div "" ,
+            city "Los Angeles" ,
+            sub "CA" ,
+            country "USA" ,
+            street "Hollywood" ,
+            postal-code "" } } ,
+      date
+        std {
+          year 2015 ,
+          month 4 ,
+          day 24 } } ,
+    subtype new ,
+    tool "tbl2asn 20.0 - LINUX UNIX" } ,
+  data
+    entrys {
+      set {
+        class genbank ,
+        seq-set {
+          set {
+            class nuc-prot ,
+            descr {
+              source {
+                genome mitochondrion ,
+                org {
+                  taxname "Boops boops" ,
+                  db {
+                    {
+                      db "taxon" ,
+                      tag
+                        id 36219 } } ,
+                  orgname {
+                    name
+                      binomial {
+                        genus "Boops" ,
+                        species "boops" } ,
+                    mod {
+                      {
+                        subtype specimen-voucher ,
+                        subname "MNHN:1978-0632" } ,
+                      {
+                        subtype bio-material ,
+                        subname "BB-002" } } ,
+                    lineage "Eukaryota; Metazoa; Chordata; Craniata;
+ Vertebrata; Euteleostomi; Actinopterygii; Neopterygii; Teleostei;
+ Neoteleostei; Acanthomorphata; Eupercaria; Spariformes; Sparidae; Boops" ,
+                    gcode 1 ,
+                    mgcode 2 ,
+                    div "VRT" } } } ,
+              pub {
+                pub {
+                  gen {
+                    cit "Unpublished" ,
+                    authors {
+                      names
+                        std {
+                          {
+                            name
+                              name {
+                                last "Mouse" ,
+                                first "Mickey" ,
+                                initials "M." } } } ,
+                      affil
+                        std {
+                          affil "Disney" ,
+                          city "Los Angeles" ,
+                          sub "CA" ,
+                          country "USA" ,
+                          street "Hollywood" } } ,
+                    title "Phylogeographic structure of Boops boops" } } } ,
+              user {
+                type
+                  str "NcbiCleanup" ,
+                data {
+                  {
+                    label
+                      str "method" ,
+                    data
+                      str "SeriousSeqEntryCleanup" } ,
+                  {
+                    label
+                      str "version" ,
+                    data
+                      int 7 } ,
+                  {
+                    label
+                      str "month" ,
+                    data
+                      int 4 } ,
+                  {
+                    label
+                      str "day" ,
+                    data
+                      int 24 } ,
+                  {
+                    label
+                      str "year" ,
+                    data
+                      int 2015 } } } ,
+              create-date
+                std {
+                  year 2015 ,
+                  month 4 ,
+                  day 24 } } ,
+            seq-set {
+              seq {
+                id {
+                  local
+                    str "BB-002_CYTB" } ,
+                descr {
+                  molinfo {
+                    biomol genomic } } ,
+                inst {
+                  repr raw ,
+                  mol dna ,
+                  length 201 ,
+                  seq-data
+                    iupacna "ATGGCTAGCCTTCGAAAAACGCACCCCCTATTAAAAATTGCTAATCACG
+CATTAGTTGATCTCCCTGCACCCTCCAATATTTCCGTCTGATGAAATTTTGGCTCCCTGCTTGGCCTCTGTCTTATTT
+CCCAGCTCCTTACAGGGCTATTCCTCGCCATACACTATACCTCCGATATCGCTACAGCCTTCTCTTCCGTTGCC" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            gene {
+                              locus "CYTB" } ,
+                          partial TRUE ,
+                          location
+                            int {
+                              from 0 ,
+                              to 200 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "BB-002_CYTB" ,
+                              fuzz-to
+                                lim gt } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "BB-002_CYTB_1" } ,
+                descr {
+                  title "cytochrome b, partial (mitochondrion) [Boops boops]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans ,
+                    completeness no-right } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 67 ,
+                  seq-data
+                    ncbieaa "MASLRKTHPLLKIANHALVDLPAPSNISVWWNFGSLLGLCLISQLLTGL
+FLAMHYTSDIATAFSSVA" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "cytochrome b" } } ,
+                          partial TRUE ,
+                          location
+                            int {
+                              from 0 ,
+                              to 66 ,
+                              id
+                                local
+                                  str "BB-002_CYTB_1" ,
+                              fuzz-to
+                                lim gt } } } } } } } ,
+            annot {
+              {
+                data
+                  ftable {
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 2 } } ,
+                      partial TRUE ,
+                      product
+                        whole
+                          local
+                            str "BB-002_CYTB_1" ,
+                      location
+                        int {
+                          from 0 ,
+                          to 200 ,
+                          strand plus ,
+                          id
+                            local
+                              str "BB-002_CYTB" ,
+                          fuzz-to
+                            lim gt } } } } } } ,
+          set {
+            class nuc-prot ,
+            descr {
+              source {
+                genome mitochondrion ,
+                org {
+                  taxname "Boops boops" ,
+                  db {
+                    {
+                      db "taxon" ,
+                      tag
+                        id 36219 } } ,
+                  orgname {
+                    name
+                      binomial {
+                        genus "Boops" ,
+                        species "boops" } ,
+                    mod {
+                      {
+                        subtype specimen-voucher ,
+                        subname "MNHN:1978-0632" } ,
+                      {
+                        subtype bio-material ,
+                        subname "BB-003" } } ,
+                    lineage "Eukaryota; Metazoa; Chordata; Craniata;
+ Vertebrata; Euteleostomi; Actinopterygii; Neopterygii; Teleostei;
+ Neoteleostei; Acanthomorphata; Eupercaria; Spariformes; Sparidae; Boops" ,
+                    gcode 1 ,
+                    mgcode 2 ,
+                    div "VRT" } } } ,
+              pub {
+                pub {
+                  gen {
+                    cit "Unpublished" ,
+                    authors {
+                      names
+                        std {
+                          {
+                            name
+                              name {
+                                last "Mouse" ,
+                                first "Mickey" ,
+                                initials "M." } } } ,
+                      affil
+                        std {
+                          affil "Disney" ,
+                          city "Los Angeles" ,
+                          sub "CA" ,
+                          country "USA" ,
+                          street "Hollywood" } } ,
+                    title "Phylogeographic structure of Boops boops" } } } ,
+              user {
+                type
+                  str "NcbiCleanup" ,
+                data {
+                  {
+                    label
+                      str "method" ,
+                    data
+                      str "SeriousSeqEntryCleanup" } ,
+                  {
+                    label
+                      str "version" ,
+                    data
+                      int 7 } ,
+                  {
+                    label
+                      str "month" ,
+                    data
+                      int 4 } ,
+                  {
+                    label
+                      str "day" ,
+                    data
+                      int 24 } ,
+                  {
+                    label
+                      str "year" ,
+                    data
+                      int 2015 } } } ,
+              create-date
+                std {
+                  year 2015 ,
+                  month 4 ,
+                  day 24 } } ,
+            seq-set {
+              seq {
+                id {
+                  local
+                    str "BB-003_CYTB" } ,
+                descr {
+                  molinfo {
+                    biomol genomic } } ,
+                inst {
+                  repr raw ,
+                  mol dna ,
+                  length 201 ,
+                  seq-data
+                    iupacna "ATGGCTAGCCTTCGAAAAACGCACCCCCTATTAAAAATTGCTAATCACG
+CATTAGTTGATCTCCCTGCACCCTCCAATATTTCCGTCTGATGAAATTTTGGCTCCCTGCTTGGCCTCTGTCTTATTT
+CCCAGCTCCTTACAGGGCTATTCCTCGCCATACACTATACCTCCGATATCGCTACAGCCTTCTCTTCCGTTGCC" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            gene {
+                              locus "CYTB" } ,
+                          partial TRUE ,
+                          location
+                            int {
+                              from 0 ,
+                              to 200 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "BB-003_CYTB" ,
+                              fuzz-to
+                                lim gt } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "BB-003_CYTB_1" } ,
+                descr {
+                  title "cytochrome b, partial (mitochondrion) [Boops boops]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans ,
+                    completeness no-right } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 67 ,
+                  seq-data
+                    ncbieaa "MASLRKTHPLLKIANHALVDLPAPSNISVWWNFGSLLGLCLISQLLTGL
+FLAMHYTSDIATAFSSVA" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "cytochrome b" } } ,
+                          partial TRUE ,
+                          location
+                            int {
+                              from 0 ,
+                              to 66 ,
+                              id
+                                local
+                                  str "BB-003_CYTB_1" ,
+                              fuzz-to
+                                lim gt } } } } } } } ,
+            annot {
+              {
+                data
+                  ftable {
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 2 } } ,
+                      partial TRUE ,
+                      product
+                        whole
+                          local
+                            str "BB-003_CYTB_1" ,
+                      location
+                        int {
+                          from 0 ,
+                          to 200 ,
+                          strand plus ,
+                          id
+                            local
+                              str "BB-003_CYTB" ,
+                          fuzz-to
+                            lim gt } } } } } } ,
+          seq {
+            id {
+              local
+                str "BB-001_rRNA" } ,
+            descr {
+              source {
+                genome mitochondrion ,
+                org {
+                  taxname "Boops boops" ,
+                  db {
+                    {
+                      db "taxon" ,
+                      tag
+                        id 36219 } } ,
+                  orgname {
+                    name
+                      binomial {
+                        genus "Boops" ,
+                        species "boops" } ,
+                    mod {
+                      {
+                        subtype specimen-voucher ,
+                        subname "MNHN:1978-0632" } ,
+                      {
+                        subtype bio-material ,
+                        subname "BB-001" } } ,
+                    lineage "Eukaryota; Metazoa; Chordata; Craniata;
+ Vertebrata; Euteleostomi; Actinopterygii; Neopterygii; Teleostei;
+ Neoteleostei; Acanthomorphata; Eupercaria; Spariformes; Sparidae; Boops" ,
+                    gcode 1 ,
+                    mgcode 2 ,
+                    div "VRT" } } } ,
+              molinfo {
+                biomol genomic } ,
+              pub {
+                pub {
+                  gen {
+                    cit "Unpublished" ,
+                    authors {
+                      names
+                        std {
+                          {
+                            name
+                              name {
+                                last "Mouse" ,
+                                first "Mickey" ,
+                                initials "M." } } } ,
+                      affil
+                        std {
+                          affil "Disney" ,
+                          city "Los Angeles" ,
+                          sub "CA" ,
+                          country "USA" ,
+                          street "Hollywood" } } ,
+                    title "Phylogeographic structure of Boops boops" } } } ,
+              user {
+                type
+                  str "NcbiCleanup" ,
+                data {
+                  {
+                    label
+                      str "method" ,
+                    data
+                      str "SeriousSeqEntryCleanup" } ,
+                  {
+                    label
+                      str "version" ,
+                    data
+                      int 7 } ,
+                  {
+                    label
+                      str "month" ,
+                    data
+                      int 4 } ,
+                  {
+                    label
+                      str "day" ,
+                    data
+                      int 24 } ,
+                  {
+                    label
+                      str "year" ,
+                    data
+                      int 2015 } } } ,
+              create-date
+                std {
+                  year 2015 ,
+                  month 4 ,
+                  day 24 } } ,
+            inst {
+              repr raw ,
+              mol dna ,
+              length 200 ,
+              seq-data
+                iupacna "TATGGAGCTTAAGACGCCAGGGCAGCTCACGTTAAACGCCCCTAATAAAGGAA
+TAAAACCTAGTGAATCCTGCTCTAATGTCTTTGGTTGGGGCGACCACGGGGAATCATAAAACCCCCACGTGGAATGGG
+AGCACCACACTCCTAAACCCAAGAGCTTCCGCTCTAATGAACAGAACTTCTGGCCATATTAGATCCGGT" } ,
+            annot {
+              {
+                data
+                  ftable {
+                    {
+                      data
+                        rna {
+                          type rRNA ,
+                          ext
+                            name "16S ribosomal RNA" } ,
+                      partial TRUE ,
+                      location
+                        int {
+                          from 0 ,
+                          to 199 ,
+                          strand plus ,
+                          id
+                            local
+                              str "BB-001_rRNA" ,
+                          fuzz-from
+                            lim lt ,
+                          fuzz-to
+                            lim gt } } } } } } ,
+          seq {
+            id {
+              local
+                str "BB-003_rRNA" } ,
+            descr {
+              source {
+                genome mitochondrion ,
+                org {
+                  taxname "Boops boops" ,
+                  db {
+                    {
+                      db "taxon" ,
+                      tag
+                        id 36219 } } ,
+                  orgname {
+                    name
+                      binomial {
+                        genus "Boops" ,
+                        species "boops" } ,
+                    mod {
+                      {
+                        subtype specimen-voucher ,
+                        subname "MNHN:1978-0632" } ,
+                      {
+                        subtype bio-material ,
+                        subname "BB-003" } } ,
+                    lineage "Eukaryota; Metazoa; Chordata; Craniata;
+ Vertebrata; Euteleostomi; Actinopterygii; Neopterygii; Teleostei;
+ Neoteleostei; Acanthomorphata; Eupercaria; Spariformes; Sparidae; Boops" ,
+                    gcode 1 ,
+                    mgcode 2 ,
+                    div "VRT" } } } ,
+              molinfo {
+                biomol genomic } ,
+              pub {
+                pub {
+                  gen {
+                    cit "Unpublished" ,
+                    authors {
+                      names
+                        std {
+                          {
+                            name
+                              name {
+                                last "Mouse" ,
+                                first "Mickey" ,
+                                initials "M." } } } ,
+                      affil
+                        std {
+                          affil "Disney" ,
+                          city "Los Angeles" ,
+                          sub "CA" ,
+                          country "USA" ,
+                          street "Hollywood" } } ,
+                    title "Phylogeographic structure of Boops boops" } } } ,
+              user {
+                type
+                  str "NcbiCleanup" ,
+                data {
+                  {
+                    label
+                      str "method" ,
+                    data
+                      str "SeriousSeqEntryCleanup" } ,
+                  {
+                    label
+                      str "version" ,
+                    data
+                      int 7 } ,
+                  {
+                    label
+                      str "month" ,
+                    data
+                      int 4 } ,
+                  {
+                    label
+                      str "day" ,
+                    data
+                      int 24 } ,
+                  {
+                    label
+                      str "year" ,
+                    data
+                      int 2015 } } } ,
+              create-date
+                std {
+                  year 2015 ,
+                  month 4 ,
+                  day 24 } } ,
+            inst {
+              repr raw ,
+              mol dna ,
+              length 200 ,
+              seq-data
+                iupacna "TATGGAGCTTAAGACGCCAGGGCAGCTCACGTTAAACGCCCCTAATAAAGGAA
+TAAAACCTAGTGAATCCTGCTCTAATGTCTTTGGTTGGGGCGACCACGGGGAATCATAAAACCCCCACGTGGAATGGG
+AGCACCACACTCCTAAACCCAAGAGCTTCCGCTCTAATGAACAGAACTTCTGGCCATATTAGATCCGGT" } ,
+            annot {
+              {
+                data
+                  ftable {
+                    {
+                      data
+                        rna {
+                          type rRNA ,
+                          ext
+                            name "16S ribosomal RNA" } ,
+                      partial TRUE ,
+                      location
+                        int {
+                          from 0 ,
+                          to 199 ,
+                          strand plus ,
+                          id
+                            local
+                              str "BB-003_rRNA" ,
+                          fuzz-from
+                            lim lt ,
+                          fuzz-to
+                            lim gt } } } } } } } } } }

@@ -1,0 +1,129 @@
+Few things fill the hearts of molecular biologists with as much dread as embarking on a GenBank submission. We all benefit from GenBank, but getting our data up there can sometimes be a rather onerous process. I am sure that if this community-minded attitude were not insisted upon by journals, GenBank would be pretty empty. Here, I will try to help with some of the organisational and practical aspects to make the process a little more painless.<br />
+<br />
+
+<b>Proper Planning and Preparation Prevents Piss Poor Performance</b><br />
+<br />
+To most, GenBank submission is something of an afterthought, to be done once your paper has been accepted. Here I will challenge that, and try to suggest that you should be putting your data up on GenBank <em>before</em> you submit your manuscript. This is because:
+
+ <ol>
+  <li>You have an opportunity to notice potentially serious errors in your data at a much earlier stage in your project.</li>
+  <li>Your paper will benefit from fewer delays during the revision process, and is likely to get published faster.</li>
+  <li>If you send the GenBank flatfile as information supporting your manuscript, reviewers will have access to your raw data and will be able to review that data.</li>
+  <li>It forces you to get organised up front, which is generally a good thing all round.</li>
+  <li>If you are worried about being scooped, you always have the option of releasing the data after publication.</li>
+</ol> 
+
+<b>What are the options?</b><br />
+<br />
+	
+There are three main ways you can get data onto GenBank: 'BankIt', 'Sequin', and 'tbl2asn'. The main differences are described <a href="http://www.ncbi.nlm.nih.gov/genbank/submit"><span style="color: blue;">here</span></a>, but essentially BankIt is a Web-based submission tool, Sequin is a standalone offline program with a GUI (graphical user interface), and tbl2asn is the scary command line option.<br />
+<br />
+
+In my experience, BankIt is suitable for trivial uploads of small numbers of sequences, and it pretty easy to use. Sequin seems to be the most popular method, but I would avoid it, as it not as straightforward as it seems, and many find it quite confusing and time consuming. I favour tbl2asn, as it means you can script your submission and save yourself considerable time. This is the method I will demonstrate now.<br />
+<br />
+
+<!--...
+<a href="http://rs.tdwg.org/dwc/terms/"><span style="color: blue;">Darwin Core</span></a>
+
+http://www.ncbi.nlm.nih.gov/WebSub/html/help/genbank-source-table.html
+-->
+
+<b>Where to start</b><br />
+<br />
+
+First, you will need get your data into a suitable file format as a master copy. Master copies are important, because when you return to a project after six months, you might want to know which of the 347 fasta files in your folder is the correct one to use. For a master copy, I recommend CSV/TSV, mainly for simplicity's sake&lowast;. This file should be version controlled of course, using git. The benefit of CSV over say fasta or nexus, is that an unlimited amount of ancillary information can also be stored in it, including for example: scientific names, higher classifications, geography, GPS coordinates, specimen voucher data (essentially whatever metadata are available and useful). Try to use a controlled vocabulary here wherever possible (<a href="http://rs.tdwg.org/dwc/terms/"><span style="color: blue;">Darwin Core</span></a> is a good place to start). Having all the data in this format is also a big help when running your analyses and making your figures.<br />
+<br />
+
+Here's a fictitious example of a format of a master file (much simplified, and do not copy this, as extra tabs were added to visualise). As you can see, I sampled three <em>Boops boops</em> all from the same MNHN museum lot and generated data for both mitochondrial cytb and 16S.<br />
+<br />
+
+<script src="https://gist.github.com/boopsboops/26ae493c4ce8c7ffb530.js"></script><br />
+
+<b>Importing your data into R</b><br />
+<br />
+
+Here, we read the table into R, and then because some of our individuals were not sequenced for both genes, we need to remove those represented with 'NA' (for the cytb gene first). Also remember that when working with text, that strings should not be factors!<br />
+<br />
+
+<script src="https://gist.github.com/boopsboops/bed8fdc0eb7a67db2f42.js"></script><br />
+
+<b>Gene names</b><br />
+<br />
+
+Now, we need to use consistent nomenclature in our submission, which means using the correct gene and product names. Anyone who has ever searched GenBank for specific genes will know how frustrating it is when one gene is known under half a dozen names. Here I looked up the <a href="http://www.ncbi.nlm.nih.gov/genomes/GenomesHome.cgi?taxid=2759&hopt=help"><span style="color: blue;">NCBI organelle resources</span></a> for the official name of cytb, which is 'CYTB' (all in upper-case). The official name of its product&mdash;in this case the protein it codes for&mdash;is "cytochrome b" (all lower case).<br />
+<br />
+
+You'll need to also be aware of general usage patterns, as you'll notice that COI is officially called 'COX1' on this list, but very few people use this name when submitting. For nuclear gene names, take a look <a href="http://www.ncbi.nlm.nih.gov/CCDS/CcdsBrowse.cgi"><span style="color: blue;">here</span></a> and <a href="http://www.genenames.org/"><span style="color: blue;">here</span></a>
+.<br />
+<br />
+
+<script src="https://gist.github.com/boopsboops/f70f48d3a0346e2eac09.js"></script><br />
+
+<b>Source modifiers</b><br />
+<br />
+
+Here, we write a GenBank formatted fasta file containing our important source modifying annotations, specifically:
+ <ol>
+  <li>The 'Sequence_ID', in our case the number of the tissue sample under 'otherCatalogNumbers' in our spreadsheet pasted together with the gene name to make it unique for each gene.</li>
+  <li>Organism name made by pasting 'genus' and 'specificEpithet' fields together.</li>
+  <li>The 'Bio_material' code, which is the code number used in the lab tissue collection, i.e. the same as our 'otherCatalogNumbers' field.</li>
+  <li>The specimen voucher code made by pasting together the 'institutionCode' and the 'catalogNumber' fields.</li>
+  <li>The genomic location of our sequence, in this case it is 'mitochondrion' (leave this blank for nuclear DNA).</li>
+  <li>The genetic code to translate the sequences, here '2' is the mitochondrial genetic code (again, leave this blank for nuclear DNA)</li>
+</ol> 
+
+There are many more source modifiers available. See the list <a href="http://www.ncbi.nlm.nih.gov/WebSub/html/help/genbank-source-table.html"><span style="color:blue;">here</span></a>.<br /><br />
+
+<script src="https://gist.github.com/boopsboops/5603378d378daeb56227.js"></script><br />
+
+<b>Feature tables</b><br />
+<br />
+
+Now we create the feature table containing the locations of attributes of the sequence. The table is tab separated. Pay attention to the angle brackets '&lt; &gt;', as these signify that the coding sequence starts or ends outside of range of our nucleotides, i.e. if it is a partial sequence that does not code for the complete gene you may need to use the angle brackets. Here, our sequence starts on the first base of cytb, but it is only a partial sequence, so we use the angle bracket at the end only.<br />
+<br />
+
+We are also assuming here that your coding sequence is in the correct reading frame, in other words that the first nucleotide in the alignment corresponds to the first nucleotide of the amino acid. While it is possible to specify the coding sequence to start on the second or third bases, please never do this, because this information is lost when the sequences are downloaded as fasta files from GenBank, and it then makes the very simple task of aligning your sequences using codon models difficult without manually correcting these errors.<br />
+<br />
+
+<script src="https://gist.github.com/boopsboops/01e97306dca62016c647.js"></script><br />
+
+<b>Repeat for 16S</b><br />
+<br />
+
+That's it, all done for cytb. Now we repeat for our 16S sample. Remember we are overwriting our previous objects, but that's okay as these were already written to disk.<br />
+<br />
+
+<script src="https://gist.github.com/boopsboops/765dae62a0c4c1155799.js"></script><br />
+
+<b>Author info template</b><br />
+<br />
+
+Next, we need to generate a file for the author/publication information. This is done online, and you simply type the details into the <a href="http://www.ncbi.nlm.nih.gov/WebSub/template.cgi"><span style="color:blue;">Web form here</span></a> and download the file into your working directory. Easy. <br />
+<br />
+
+<b>Running 'tbl2asn'</b><br />
+<br />
+
+We have generated three files so far: 'sequences.fsa' contains our DNA sequences and source modifiers, 'features.tbl' contains the locations of the features in our data, and 'template.sbt' contains our author and publication information. Now, we need to pass these file to the 'tbl2asn' program. The latest version of the program is available from the NCBI via their  <a href="http://www.ncbi.nlm.nih.gov/genbank/tbl2asn2"><span style="color:blue;">FTP site</span></a>. If you find your institution blocks FTP connections such as this, you can find the tool as part of the NCBI's published toolkit (simply 'sudo apt-get install ncbi-tools-bin' to install). However this version is over a year old, so I do not know if its output would be acceptable for GenBank today.  Running this program from the terminal assumes that it is in your PATH, as follows.<br />
+ <br />
+
+<script src="https://gist.github.com/boopsboops/17641e7c9358c9ea0b1e.js"></script> <br />
+
+<b>Output</b><br />
+<br />
+
+When the program has run (it's quick), it outputs a series of files. This includes one called 'errorsummary.val', which is important, as it contains a list of errors. In this case, we have none, and the file is empty. The two main output files are called 'sequences.gbf', and 'sequences.sqn'. The gbf file is a GenBank flatfile, the same as you would access through GenBank. This file is designed to be human-readable, so you need to review this in order to check you are happy with everything. <br />
+ <br />
+
+<b>Submit</b><br />
+<br />
+ 
+If all looks okay, you are ready to submit to GenBank! This is as simple as emailing the 'sequences.sqn' file to GenBank ('gb-sub@ncbi.nlm.nih.gov'). In a couple of days, you should receive via email your shiny new accession numbers, although it may take several further weeks before the sequences go live.<br />
+<br />
+
+<b>Have a go ...</b><br />
+<br />
+
+If you wish to try this out yourself, all the files to repeat this example (except tbl2asn) can be found at <a href="https://github.com/boopsboops/genbank-submit"><span style="color:blue;">https://github.com/boopsboops/genbank-submit</span></a>. One day I might wrap this up into a nice function.<br /><br />
+
+<span style="font-size:small">&lowast;While this is okay for a small-medium sized project, you really need to be thinking about relational databases for more complicated structures linking several projects. </span>

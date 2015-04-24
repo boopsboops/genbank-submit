@@ -1,0 +1,150 @@
+LOCUS       BB-002_CYTB              201 bp    DNA     linear   VRT 24-APR-2015
+DEFINITION  Boops boops.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      mitochondrion Boops boops
+  ORGANISM  Boops boops
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Actinopterygii; Neopterygii; Teleostei; Neoteleostei;
+            Acanthomorphata; Eupercaria; Spariformes; Sparidae; Boops.
+REFERENCE   1  (bases 1 to 201)
+  AUTHORS   Mouse,M.
+  TITLE     Phylogeographic structure of Boops boops
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 201)
+  AUTHORS   Mouse,M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (24-APR-2015) Disney, Hollywood, Los Angeles, CA, USA
+FEATURES             Location/Qualifiers
+     source          1..201
+                     /organism="Boops boops"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /specimen_voucher="MNHN:1978-0632"
+                     /bio_material="BB-002"
+                     /db_xref="taxon:36219"
+     gene            1..>201
+                     /gene="CYTB"
+     CDS             1..>201
+                     /gene="CYTB"
+                     /codon_start=1
+                     /transl_table=2
+                     /product="cytochrome b"
+                     /translation="MASLRKTHPLLKIANHALVDLPAPSNISVWWNFGSLLGLCLISQ
+                     LLTGLFLAMHYTSDIATAFSSVA"
+ORIGIN      
+        1 atggctagcc ttcgaaaaac gcacccccta ttaaaaattg ctaatcacgc attagttgat
+       61 ctccctgcac cctccaatat ttccgtctga tgaaattttg gctccctgct tggcctctgt
+      121 cttatttccc agctccttac agggctattc ctcgccatac actatacctc cgatatcgct
+      181 acagccttct cttccgttgc c
+//
+LOCUS       BB-003_CYTB              201 bp    DNA     linear   VRT 24-APR-2015
+DEFINITION  Boops boops.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      mitochondrion Boops boops
+  ORGANISM  Boops boops
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Actinopterygii; Neopterygii; Teleostei; Neoteleostei;
+            Acanthomorphata; Eupercaria; Spariformes; Sparidae; Boops.
+REFERENCE   1  (bases 1 to 201)
+  AUTHORS   Mouse,M.
+  TITLE     Phylogeographic structure of Boops boops
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 201)
+  AUTHORS   Mouse,M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (24-APR-2015) Disney, Hollywood, Los Angeles, CA, USA
+FEATURES             Location/Qualifiers
+     source          1..201
+                     /organism="Boops boops"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /specimen_voucher="MNHN:1978-0632"
+                     /bio_material="BB-003"
+                     /db_xref="taxon:36219"
+     gene            1..>201
+                     /gene="CYTB"
+     CDS             1..>201
+                     /gene="CYTB"
+                     /codon_start=1
+                     /transl_table=2
+                     /product="cytochrome b"
+                     /translation="MASLRKTHPLLKIANHALVDLPAPSNISVWWNFGSLLGLCLISQ
+                     LLTGLFLAMHYTSDIATAFSSVA"
+ORIGIN      
+        1 atggctagcc ttcgaaaaac gcacccccta ttaaaaattg ctaatcacgc attagttgat
+       61 ctccctgcac cctccaatat ttccgtctga tgaaattttg gctccctgct tggcctctgt
+      121 cttatttccc agctccttac agggctattc ctcgccatac actatacctc cgatatcgct
+      181 acagccttct cttccgttgc c
+//
+LOCUS       BB-001_rRNA              200 bp    DNA     linear   VRT 24-APR-2015
+DEFINITION  Boops boops.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      mitochondrion Boops boops
+  ORGANISM  Boops boops
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Actinopterygii; Neopterygii; Teleostei; Neoteleostei;
+            Acanthomorphata; Eupercaria; Spariformes; Sparidae; Boops.
+REFERENCE   1  (bases 1 to 200)
+  AUTHORS   Mouse,M.
+  TITLE     Phylogeographic structure of Boops boops
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 200)
+  AUTHORS   Mouse,M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (24-APR-2015) Disney, Hollywood, Los Angeles, CA, USA
+FEATURES             Location/Qualifiers
+     source          1..200
+                     /organism="Boops boops"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /specimen_voucher="MNHN:1978-0632"
+                     /bio_material="BB-001"
+                     /db_xref="taxon:36219"
+     rRNA            <1..>200
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 tatggagctt aagacgccag ggcagctcac gttaaacgcc cctaataaag gaataaaacc
+       61 tagtgaatcc tgctctaatg tctttggttg gggcgaccac ggggaatcat aaaaccccca
+      121 cgtggaatgg gagcaccaca ctcctaaacc caagagcttc cgctctaatg aacagaactt
+      181 ctggccatat tagatccggt
+//
+LOCUS       BB-003_rRNA              200 bp    DNA     linear   VRT 24-APR-2015
+DEFINITION  Boops boops.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      mitochondrion Boops boops
+  ORGANISM  Boops boops
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Actinopterygii; Neopterygii; Teleostei; Neoteleostei;
+            Acanthomorphata; Eupercaria; Spariformes; Sparidae; Boops.
+REFERENCE   1  (bases 1 to 200)
+  AUTHORS   Mouse,M.
+  TITLE     Phylogeographic structure of Boops boops
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 200)
+  AUTHORS   Mouse,M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (24-APR-2015) Disney, Hollywood, Los Angeles, CA, USA
+FEATURES             Location/Qualifiers
+     source          1..200
+                     /organism="Boops boops"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /specimen_voucher="MNHN:1978-0632"
+                     /bio_material="BB-003"
+                     /db_xref="taxon:36219"
+     rRNA            <1..>200
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 tatggagctt aagacgccag ggcagctcac gttaaacgcc cctaataaag gaataaaacc
+       61 tagtgaatcc tgctctaatg tctttggttg gggcgaccac ggggaatcat aaaaccccca
+      121 cgtggaatgg gagcaccaca ctcctaaacc caagagcttc cgctctaatg aacagaactt
+      181 ctggccatat tagatccggt
+//
